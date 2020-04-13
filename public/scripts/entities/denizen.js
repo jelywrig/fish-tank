@@ -61,6 +61,10 @@ class Denizen {
     this.tank.removeDenizen(this.id, duration);
   }
 
+  getNeighbours() {
+    return this.tank.getProximateDenizens(this.position, 60);
+  }
+
   outOfBounds(bounds) {
     // TODO: it'd be cool if Seeds could go above the top fo the tank, then fall back down
     return (
